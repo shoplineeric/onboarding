@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @shops.name %></td>
+        <td><%= link_to 'Show', [@shops.user, @shops] %></td>
+        <td><%= link_to 'Edit', edit_user_shop_path(@shops.user, @shops) %></td>
+        <td><%= link_to 'Destroy', [@shops.user, @shops], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shop', new_user_shop_path %>
